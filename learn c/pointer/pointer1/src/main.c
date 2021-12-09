@@ -26,7 +26,7 @@ int main()
 		case 3:
 			for (int k = 0; country[k] != '\0'; k++)
 			{
-				printf("%d. veri: %x\n", k+1, (country + k));
+				printf("%d. veri: %x\n", k+1, &*(country + k));
 			}
 
 			break;
