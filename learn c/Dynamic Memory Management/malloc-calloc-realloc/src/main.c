@@ -44,8 +44,8 @@ int main()
 			scanf("%d", &id);
 			for (int i = id; i <= max; i++)
 			{
-				book[i ] = book[i+1];
-				author[i] = author[i+1];
+				book[i] = book[i + 1];
+				author[i] = author[i + 1];
 			}
 			max--;
 			break;
@@ -75,6 +75,13 @@ int main()
 			break;
 		}
 	}
-
+	for (i = 0; i < max; i++)
+	{
+		free(book[i]);
+		free(author[i]);
+	}
+	free(book);
+	free(author);
+	system("pause");
 	return (0);
 }
