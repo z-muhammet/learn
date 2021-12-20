@@ -1,2 +1,2 @@
-# i just learn c
+# i just learn
  
