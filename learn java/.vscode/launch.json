@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch countingLattersV2",
+            "request": "launch",
+            "mainClass": "countingLattersV2",
+            "projectName": "learn java_3ccb3ba2"
+        },
+        {
+            "type": "java",
             "name": "Launch External Terminal",
             "request": "launch",
             "console": "externalTerminal",
