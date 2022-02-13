@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class firstProject {
     public static void main(String[] args) throws IOException {
-        Scanner scan = new Scanner(System.in);
+        try(Scanner scan = new Scanner(System.in)){
         String pid, Personalname, Personalsurname, Personalposition, PersonalId;
         double wage;
-        int Sel = 0;// timer=0;
+        int Sel = 0, timer=0;
         File hebele = new File("hebele.txt");
         if (!hebele.exists()) {
             hebele.createNewFile();
@@ -30,17 +30,17 @@ public class firstProject {
                         System.out.println("pls u enter Personal wage: ");
                         wage = scan.nextDouble();
                         menage.add(hebele, PersonalId, Personalname, Personalsurname, Personalposition, wage);
-                        // timer++;
+                        timer++;
                         break;
                     case 3:
-                        menage.list(hebele, 10);
+                        menage.list(hebele, timer);
                         System.out.print("pls u enter personal id: ");
                         pid = scan.next();
-                        menage.edit(hebele, 10, pid);
+                        menage.edit(hebele, timer, pid);
                         break;
 
                     case 2:
-                        menage.list(hebele, 5);
+                        menage.list(hebele, timer);
                         break;
                     case 4:
                         System.out.println("Good lucky");
@@ -50,7 +50,6 @@ public class firstProject {
                 }
             }
         }
-
-        scan.close();
+    }
     }
 }

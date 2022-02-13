@@ -7,11 +7,10 @@ import java.util.Scanner;
 public class menage {
     public static void add(File fname, String PersonalId, String name, String surname, String position, Double wage)
             throws IOException {
-        FileWriter fileWriter = new FileWriter(fname, true);
+        FileWriter fileWriter = new FileWriter(fname);
         PrintWriter printWriter = new PrintWriter(fileWriter);
         printWriter.printf("id: %s name: %s surname: %s position: %s wage: %.3f \n", PersonalId, name, surname,
                 position, wage);
-        fileWriter.close();
         printWriter.close();
     }
 
@@ -19,7 +18,7 @@ public class menage {
         String cont2[] = new String[timer], cont, Pid[] = new String[25], Pname[] = new String[25],
                 Psurname[] = new String[25], Pposition[] = new String[25];
         double Pwage[] = new double[25];
-        int i = 0, hubele=0;
+        int i = 0, hubele = 0;
         Scanner fileScanner = new Scanner(fname);
         for (; i < timer; i++) {
             cont = fileScanner.nextLine();
@@ -48,7 +47,8 @@ public class menage {
             }
         }
         for (int k = 0; k < timer; k++) {
-            if (Pid[k] == personid) {
+            System.out.println(Pid[k]);
+            if (Pid[k].equals(personid)) {
                 hubele = k;
                 break;
             }
@@ -66,14 +66,12 @@ public class menage {
         Pwage[hubele] = scanf.nextDouble();
         FileWriter fileWriter = new FileWriter(fname, false);
         PrintWriter printWriter = new PrintWriter(fileWriter);
-        for (int j = 0; j < Pid.length; j++) {
-            printWriter.printf("id: %s name: %s surname: %s position: %s wage: %.3f \n", Pid[j], Pname[j], Psurname[j],
-                Pposition[j], Pwage[j]);
+        for (int j = 0; j < timer; j++) {
+            printWriter.printf("id: %s name: %s surname: %s position: %s wage: %.3f \n", Pid[j], Pname[j],
+                    Psurname[j],
+                    Pposition[j], Pwage[j]);
         }
-
         printWriter.close();
-        scanf.close();
-        fileScanner.close();
     }
 
     public static void list(File fname, int timer) throws IOException {
@@ -82,9 +80,7 @@ public class menage {
         for (int i = 0; i < timer; i++) {
             list[i] = scan.nextLine();
             System.out.println(list[i]);
+
         }
-
-        scan.close();
-
     }
 }
