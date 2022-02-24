@@ -1,5 +1,21 @@
 package menager;
 
-public class employeeMenager extends baseMenager {
+import dataBase.person;
 
+public class employeeMenager extends baseMenager {
+    public void addEmployee() {
+
+    }
+
+    public void deleteEmployee() {
+
+    }
+
+    public void editEmployee() {
+
+    }
+
+    public void listEmployee() {
+
+    }
 }
