@@ -12,7 +12,7 @@ public class baseLogger {
     }
 
     public String add() {
-        return "new " + this.name() + " added";
+        return "new " + name() + " added";
     }
 
     public String delete(String id) {

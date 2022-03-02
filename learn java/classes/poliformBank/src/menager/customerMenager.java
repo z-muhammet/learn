@@ -1,20 +1,26 @@
 package menager;
 
+import dataBase.customer;
+import dataBase.person;
+
 public class customerMenager extends baseMenager {
 
-    public void addCustomer() {
+    userOperation userOperation = new userOperation();
+
+    public void add(int noId, person person) {
+        person.setRank(userOperation.mainEnterString("Rank"), noId);
+        person.setdebt(userOperation.mainEnterDouble("Debt"), noId);
+    }
+
+    public void delete() {
 
     }
 
-    public void deleteCustomer() {
+    public void edit() {
 
     }
 
-    public void editCustomer() {
-
-    }
-
-    public void listCustomer() {
+    public void list() {
 
     }
 }

@@ -3,19 +3,20 @@ package menager;
 import dataBase.person;
 
 public class employeeMenager extends baseMenager {
-    public void addEmployee() {
+    @Override
+    public void add() {
 
     }
 
-    public void deleteEmployee() {
+    public void delete() {
 
     }
 
-    public void editEmployee() {
+    public void edit() {
 
     }
 
-    public void listEmployee() {
+    public void list() {
 
     }
 }
