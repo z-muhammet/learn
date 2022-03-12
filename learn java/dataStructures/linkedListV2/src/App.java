@@ -31,7 +31,7 @@ public class App {
                     System.out.print("pls u enter search value: ");
                     data = scanner.nextInt();
                     if (nodeMenager.searcbackIntNode(data).getNext() != null)
-                        System.out.println("list have this: " + nodeMenager.searcbackIntNode(data).getNext().getData());
+                        System.out.println("list have this: " + nodeMenager.searcbackIntNode(data).getData());
                     break;
                 default:
                     break;
