@@ -31,7 +31,7 @@ public class App {
                     }
                     break;
                 case 4:
-                    System.out.println(nodeMenager.searcNode());
+                    System.out.println(nodeMenager.searcNode().get_data());
                 default:
                     break;
             }
