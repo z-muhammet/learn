@@ -27,7 +27,7 @@ public class nodeMenager {
         }
     }
 
-    public void priority(node node) {
+    public void priority(node node) { 
         node.setNext(firstNode);
         firstNode = node;
         if (lastNode == null) {
