@@ -1,3 +1,4 @@
+import java.util.Queue;
 import java.util.Stack;
 
 public class nodemenager {
@@ -83,6 +84,19 @@ public class nodemenager {
         }
     }
 
+    public node minParentNode() {
+        node tempNode = rootNode;
+        int data = rootNode.getData();
+        while ((tempNode.getData() <= data) && tempNode.getLeftNode() != null) {
+            data = tempNode.getData();
+            stack.push(tempNode);
+            tempNode = tempNode.getLeftNode();
+        }
+        tempNode = stack.pop();
+        stack.clear();
+        return tempNode;
+    }
+
     public node min(node tempNode) {
         int data = tempNode.getData();
         while ((tempNode.getData() <= data) && tempNode.getLeftNode() != null) {
@@ -90,6 +104,19 @@ public class nodemenager {
             tempNode = tempNode.getLeftNode();
         }
         return tempNode;
+    }
+
+    public node maxParentNode() {
+        node tempNode = rootNode;
+        int data = tempNode.getData();
+        while ((tempNode.getData() >= data) && tempNode.getRightNode() != null) {
+            data = tempNode.getData();
+            stack.push(tempNode);
+            tempNode = tempNode.getRightNode();
+        }
+        tempNode = stack.pop();
+        return tempNode;
+
     }
 
     public node max(node tempNode) {
@@ -169,9 +196,13 @@ public class nodemenager {
     public void deleteTwoChild(node tempNode, boolean check) {
         if (check) {
             if (tempNode.getRightNode() != null && tempNode.getLeftNode() != null) {
-                int tempdata = min(tempNode.getRightNode()).getData();
-                deleteTwoChild(searchv2(tempdata), false);
-                tempNode.setData(tempdata);
+                if (tempNode != rootNode) {
+
+                } else {
+                    int tempdata = min(tempNode.getRightNode()).getData();
+                    deleteTwoChild(searchv2(tempdata), false);
+                    tempNode.setData(tempdata);
+                }
             }
         } else {
             if (tempNode.getRightNode().getRightNode() == null) {
@@ -191,7 +222,7 @@ public class nodemenager {
         node tempNode2 = searchv2(data);
         if (tempnode1.getLeftNode() != null && tempnode1.getRightNode() != null) {
             deleteTwoChild(tempnode1, true);
-        } else if (tempNode2.getLeftNode().equals(tempnode1)) {
+        } else if (tempNode2.getLeftNode() == tempnode1) {
             deleteHelper(data, true);
         } else {
             deleteHelper(data, false);
