@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "inline-parameters.enabled": true,
+    "java.inlayHints.parameterNames.enabled": "all",
+    "editor.inlayHints.enabled": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
+}

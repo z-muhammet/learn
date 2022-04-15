@@ -15,11 +15,40 @@ public class nodeMenager {
         }
     }
 
+    public void enquee(node node) {
+        if (checkList()) {
+            addFirst(node);
+            setSay(true);
+        } else {
+            node tempNode = firstNode;
+            while (tempNode.getNext() != firstNode && node.getData() > tempNode.getData()) {
+                tempNode = tempNode.getNext();
+            }
+            if (tempNode.getNext() == firstNode && tempNode.getData() < node.getData()) {
+                addLast(node);
+                setSay(true);
+            } else if (tempNode == firstNode) {
+                setSay(true);
+                node.setNext(tempNode);
+                firstNode = node;
+                lastNode.setNext(node);
+            } else {
+                node tempNode2 = firstNode;
+                while (tempNode2.getNext() != tempNode) {
+                    tempNode2 = tempNode2.getNext();
+                }
+                node.setNext(tempNode);
+                tempNode2.setNext(node);
+                setSay(true);
+            }
+        }
+    }
+
     public void getFirstNode() {
         node tempNode = firstNode;
         firstNode = firstNode.getNext();
         lastNode.setNext(firstNode);
-        System.out.println(tempNode.getData());
+        System.out.println(tempNode.getDat());
         setSay(false);
         if (firstNode == lastNode && say == 0) {
             firstNode = null;
@@ -27,7 +56,7 @@ public class nodeMenager {
         }
     }
 
-    public void priority(node node) { 
+    public void priority(node node) {
         node.setNext(firstNode);
         firstNode = node;
         if (lastNode == null) {
@@ -50,7 +79,9 @@ public class nodeMenager {
     public void addFirst(node node) {
         if (checkList()) {
             firstNode = node;
+            firstNode.setNext(lastNode);
             lastNode = node;
+            lastNode.setNext(firstNode);
         }
     }
 
