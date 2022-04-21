@@ -39,24 +39,3 @@ public class hashmenager {
         linearHash(data, hashmapquadratic);
     }
 }
-
-/*
- * public void linearHash(int data) {
- * int key = data % 15;
- * int j = 0;
- * while (hashmaplinear[key + j] != 0) {
- * 
- * çalma kemençem dertli
- * zaten yüreğum yara
- * böyle ayriluk omaz
- * hep mi bu bahtum kara
- * civranin yalısına vardır küçük bir liman
- * gelmeyelum göz göze ağlarum dayanamam
- * gece gökte dağ gibiii
- * hay sikiyum nenenu bu şarkı böyyle mi söylenurr <3
- * 
- * j++;
- * }
- * hashmaplinear[key + j] = data;
- * }
- */
