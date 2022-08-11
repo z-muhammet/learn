@@ -1,7 +1,7 @@
 public class hashmenager {
     node[] hashmap = new node[15];
     int hashmaplinear[] = new int[100];
-    int hashmapquadratic[] = new int[100];
+    int hashmapquadratic[] = new int[11];
     int conflictlinear;
     int conflictquadronic;
 
@@ -28,14 +28,16 @@ public class hashmenager {
     }
 
     public void quadratic(int data) {
-        int hx = data % 100;
-        for (int j = 0; j < 10; j++) {
-            int hxx = (hx * j * j) % 100;
-            if (hashmapquadratic[hxx] == 0) {
-                hashmapquadratic[hxx] = data;
-                break;
+        int newtry = 0;
+        int hx = (data * data) % 11;
+        if (hashmapquadratic[hx] == 0) {
+            hashmapquadratic[hx] = data;
+        } else {
+            while (hashmapquadratic[hx + (newtry * newtry)] != 0) {
+                newtry++;
             }
+            hashmapquadratic[hx + (newtry * newtry)] = data;
         }
-        linearHash(data, hashmapquadratic);
+
     }
 }

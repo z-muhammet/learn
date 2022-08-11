@@ -5,15 +5,15 @@ public class App {
     public static void main(String[] args) throws IOException {
         hashmenager hash = new hashmenager();
         Random random = new Random();
-        for (int i = 0; i < 100; i++) {
-            hash.chaining(random.nextInt(10000) + 1);
-        }
-        for (int i = 0; i < 100; i++) {
-            hash.linearHash(random.nextInt(10000) + 1, hash.hashmaplinear);
-        }
-        for (int i = 0; i < 100; i++) {
-            hash.quadratic(random.nextIn(10000) + 1);
-        }
+
+        hash.quadratic(5);
+        hash.quadratic(8);
+        hash.quadratic(12);
+        hash.quadratic(13);
+        hash.quadratic(6);
+        hash.quadratic(14);
+        hash.quadratic(20);
+
         System.out.println("breakpoint");
         // this is clean code
     }
