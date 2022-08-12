@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/group"
         android:layout_width="409dp"
         android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,7 +38,7 @@
             android:hint="e-Mail"
             android:inputType="none|textEmailAddress"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/scrnbtn"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.45" />
 
@@ -52,16 +53,17 @@
             android:selectAllOnFocus="false"
             android:singleLine="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/scrnbtn"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.65999997"
             tools:text="password" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/scrnbtn"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            android:text="Button"
+            android:onClick="screen"
+            android:text="giris"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -69,14 +71,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.58000004" />
 
-        <TextView
-            android:id="@+id/textView2"
+        <Button
+            android:id="@+id/button10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="şifremi unuttum"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/button"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            android:background="@android:color/transparent"
+            android:text="sifremi unuttum"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/group"
+            app:layout_constraintStart_toStartOf="@+id/scrnbtn"
+            app:layout_constraintTop_toBottomOf="@+id/scrnbtn"
+            tools:layout_editor_absoluteX="304dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
