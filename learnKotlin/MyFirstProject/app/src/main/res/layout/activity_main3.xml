@@ -159,6 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="120dp"
                     android:layout_weight="1"
+                    android:onClick="runActivity"
                     android:background="@android:color/transparent"
                     android:text="="
                     android:textColor="#D5D5D5"
@@ -228,4 +229,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

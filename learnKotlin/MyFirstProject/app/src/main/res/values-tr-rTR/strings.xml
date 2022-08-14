@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="explanation">Kotlin, Java sanal makinesi (JVM) üzerinde çalışan ve ayrıca JavaScript kaynak koduna derlenebilir, statik tipli bir programlama dilidir. İlk geliştirme Sankt-Peterburg, Rusya merkezli JetBrains programcıları tarafından yapılmıştır. İsmi Kotlin Adası\'ndan gelmektedir. Java ile uyumlu sözdizimi olmasa da, Kotlin Java kodu ile birlikte çalışmak üzere tasarlanmıştır. Kotlin, Apple\'ın Swift diline benzemektedir.</string>
+</resources>

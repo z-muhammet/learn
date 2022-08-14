@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">MyFirstProject</string>
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="app_name" translatable="false">MyFirstProject</string>
+    <string name="title_activity_main2" translatable="false">MainActivity2</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <string name="explanation">Kotlin is a static-type programming language that runs on a Java virtual machine (JVM) and can also be compiled into JavaScript source code. Initial development was done by JetBrains programmers based in Saint-Peterburg, Russia. Its name comes from Kotlin Island. Although not Java compatible syntax, Kotlin is designed to work with Java code. Kotlin is similar to Apple\'s Swift language.</string>
 </resources>
