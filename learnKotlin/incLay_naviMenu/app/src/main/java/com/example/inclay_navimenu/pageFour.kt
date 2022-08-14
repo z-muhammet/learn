@@ -15,17 +15,21 @@ class pageFour : AppCompatActivity() {
         val buttonFour = findViewById<Button>(R.id.page_Four)
         buttonFour.setTextColor(Color.parseColor("#ffffff"))
     }
-    public fun navitePage(view: View){
+    fun navitePage(view: View){
         val pTwo = Intent(this,pageTwo::class.java)
         val pThree = Intent(this,pageThre::class.java)
         val pFour = Intent(this,pageFour::class.java)
         val pOne = Intent(this,MainActivity::class.java)
 
         when (view.tag){
-            "1" -> startActivity(pOne)
-            "2" -> startActivity(pTwo)
-            "3" -> startActivity(pThree)
-            "4" -> startActivity(pFour)
+            "1" -> { startActivity(pOne)
+                finish()}
+            "2" -> {startActivity(pTwo)
+                finish()}
+            "3" ->{ startActivity(pThree)
+                finish()}
+            "4" -> {startActivity(pFour)
+                finish()}
         }
     }
 }

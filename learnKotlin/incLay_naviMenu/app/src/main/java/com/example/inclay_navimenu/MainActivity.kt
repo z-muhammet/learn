@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
     var actName = ""
@@ -13,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         actName = this.localClassName
-        val buttonone = findViewById<Button>(R.id.page_One)
+        val buttonOne = findViewById<Button>(R.id.page_One)
         if(actName == "MainActivity"){
-            buttonone.setTextColor(Color.parseColor("#ffffff"))
+            buttonOne.setTextColor(Color.parseColor("#ffffff"))
         }
     }
     public fun navitePage(view: View){
@@ -25,10 +24,14 @@ class MainActivity : AppCompatActivity() {
         val pOne = Intent(this,MainActivity::class.java)
 
         when (view.tag){
-            "1" -> startActivity(pOne)
-            "2" -> startActivity(pTwo)
-            "3" -> startActivity(pThree)
-            "4" -> startActivity(pFour)
+            "1" -> { startActivity(pOne)
+                finish()}
+            "2" -> {startActivity(pTwo)
+                finish()}
+            "3" ->{ startActivity(pThree)
+                finish()}
+            "4" -> {startActivity(pFour)
+                finish()}
         }
     }
 
