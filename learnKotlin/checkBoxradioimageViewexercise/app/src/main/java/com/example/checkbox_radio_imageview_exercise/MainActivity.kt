@@ -1,10 +1,13 @@
 package com.example.checkbox_radio_imageview_exercise
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Message
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +20,16 @@ class MainActivity : AppCompatActivity() {
         val microP_rb = findViewById<RadioButton>(R.id.microphone_rb)
         val redImageView = findViewById<ImageView>(R.id.redView)
         val greenImageView = findViewById<ImageView>(R.id.greenView)
+        fun alertDia(Title: String,message: String, toastMessage: String){
+            val alert = android.app.AlertDialog.Builder(this)
+            alert.setTitle(Title)
+            alert.setMessage(message)
+            alert.setPositiveButton("Ok", DialogInterface.OnClickListener { dialogInterface, i ->
+                Toast.makeText(this," $toastMessage",Toast.LENGTH_LONG).show()
+            })
+            alert.create()
+            alert.show()
+        }
         fun imageColor(): Int {
             return if (red_cb.isChecked && green_cb.isChecked) 3
             else if (red_cb.isChecked) 2
@@ -40,14 +53,13 @@ class MainActivity : AppCompatActivity() {
                     img_green = R.drawable.green_video_camera
                     img_red = R.drawable.red_video_camera
                 }
-                0 -> Toast.makeText(this@MainActivity, "u select image Type", Toast.LENGTH_SHORT).show()
+                0 -> alertDia("image type Selection","pls u select image type","pls retry again")
             }
             when (imageColor()) {
                 0 -> {
                     greenImageView.visibility = View.GONE
                     redImageView.visibility = View.GONE
-                    Toast.makeText(this@MainActivity, "u select color", Toast.LENGTH_LONG)
-                        .show()
+                    alertDia("image color Selection","pls u select image Color","pls retry again")
                 }
                 1 -> {
                     redImageView.visibility = View.GONE
@@ -60,7 +72,6 @@ class MainActivity : AppCompatActivity() {
                 3 -> {
                     redImageView.visibility = View.VISIBLE
                     greenImageView.visibility = View.VISIBLE
-                    Log.w("", "activated red and green")
                 }
             }
             greenImageView.setImageResource(img_green)
@@ -71,5 +82,7 @@ class MainActivity : AppCompatActivity() {
             showNow()
 
         }
+
+
     }
 }
