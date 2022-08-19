@@ -27,8 +27,7 @@ class MainActivity : AppCompatActivity() {
             alert.setPositiveButton("Ok", DialogInterface.OnClickListener { dialogInterface, i ->
                 Toast.makeText(this," $toastMessage",Toast.LENGTH_LONG).show()
             })
-            alert.create()
-            alert.show()
+            alert.create().show()
         }
         fun imageColor(): Int {
             return if (red_cb.isChecked && green_cb.isChecked) 3
