@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@id/mainText"
         app:layout_constraintVertical_bias="0.493" />
     <TextView
-        android:id="@+id/data"
+        android:id="@+id/mainData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
