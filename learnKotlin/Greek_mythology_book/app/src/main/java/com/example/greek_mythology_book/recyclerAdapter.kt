@@ -10,7 +10,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.greek_mythology_book.recyclerAdapter.*
-
+class singletonclass() {
+    companion object selectGodImage {
+        var selectedImage: Bitmap? = null
+    }
+}
 class recyclerAdapter(val godsArrayList: ArrayList<String>, val godsBitmapList: ArrayList<Bitmap>,context: Context) :
     RecyclerView.Adapter<recyclerViewHolder>() {
 
@@ -31,6 +35,8 @@ class recyclerAdapter(val godsArrayList: ArrayList<String>, val godsBitmapList: 
         holder.itemView.findViewById<TextView>(R.id.godsName).setOnClickListener {
             val intent = Intent(_context, book_page::class.java)
             intent.putExtra("godName",godsArrayList[position])
+            val selectedGod = singletonclass.selectGodImage
+            selectedGod.selectedImage = godsBitmapList[position]
             _context.startActivity(intent)
 
         }
