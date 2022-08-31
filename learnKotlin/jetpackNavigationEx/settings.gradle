@@ -6,6 +6,7 @@ pluginManagement {
     }
     plugins{
         id 'androidx.navigation'
+        id 'org.jetbrains.kotlin.android' version '1.7.10'
     }
 
     resolutionStrategy {
