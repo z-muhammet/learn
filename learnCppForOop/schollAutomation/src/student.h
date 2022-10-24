@@ -19,27 +19,27 @@ public:
     }
     void setName(string _name, int _numberOfScholl)
     {
-        name[getOrderHuman(_numberOfScholl,getIdOfhuman(getStudentList(),0),getStudentList())] = _name;
+        name[getOrderHuman(_numberOfScholl, getIdOfhuman(getStudentList(), 0), getStudentList())] = _name;
     }
     void setSurname(string _surname, int _numberOfScholl)
     {
-        surname[getOrderHuman(_numberOfScholl,getIdOfhuman(getStudentList(),0),getStudentList())] = _surname;
+        surname[getOrderHuman(_numberOfScholl, getIdOfhuman(getStudentList(), 0), getStudentList())] = _surname;
     }
     void setSchollClass(string _schollClass, int _numberOfScholl)
     {
-        schollClass[getOrderHuman(_numberOfScholl,getIdOfhuman(getStudentList(),0),getStudentList())] = _schollClass;
+        schollClass[getOrderHuman(_numberOfScholl, getIdOfhuman(getStudentList(), 0), getStudentList())] = _schollClass;
     }
     string getName(int _numberOfScholl)
     {
-        return name[getOrderHuman(_numberOfScholl,getIdOfhuman(getStudentList(),0),getStudentList())];
+        return name[getOrderHuman(_numberOfScholl, getIdOfhuman(getStudentList(), 0), getStudentList())];
     }
     string getSurName(int _numberOfScholl)
     {
-        return surname[getOrderHuman(_numberOfScholl,getIdOfhuman(getStudentList(),0),getStudentList())];
+        return surname[getOrderHuman(_numberOfScholl, getIdOfhuman(getStudentList(), 0), getStudentList())];
     }
     string getSchollClass(int _numberOfScholl)
     {
-        return schollClass[getOrderHuman(_numberOfScholl,getIdOfhuman(getStudentList(),0),getStudentList())];
+        return schollClass[getOrderHuman(_numberOfScholl, getIdOfhuman(getStudentList(), 0), getStudentList())];
     }
     int getSchollNumber(int _numberOfOrder)
     {
@@ -51,9 +51,9 @@ public:
     }
     void setSchollNumber()
     {
-        if (getIdOfhuman(getStudentList(), 0) == -1)
+        if (nullChecker(getStudentList()) == -1)
         {
-            cout << "log: gnos function error" << endl;
+            cout << "log: gioh function error" << endl;
             return;
         }
 

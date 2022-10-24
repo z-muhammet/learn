@@ -3,7 +3,7 @@ class mainManage
 private:
     /* data */
 public:
-    int getIdOfhuman(int* humanList, int number)
+    int getIdOfhuman(int *humanList, int number)
     {
         if (humanList[number] == 0)
         {
@@ -16,14 +16,16 @@ public:
         return -1;
     }
 
-    bool nullChecker(int humanList[])
+    int nullChecker(int humanList[])
     {
         if (getIdOfhuman(humanList, 0) == 0)
-            return true;
+            return 0;
+        else if (getIdOfhuman(humanList, 0) == -1)
+            return -1;
         else
-            false;
+            return 0;
     }
-     int getOrderHuman(int _humanId,int _checkListSize,int humanList[])
+    int getOrderHuman(int _humanId, int _checkListSize, int humanList[])
     {
         int i = 0;
         while (i <= _checkListSize)
@@ -36,7 +38,7 @@ public:
 
         cout << "error goh function" << endl;
     }
-    
+
     mainManage(/* args */);
     ~mainManage();
 };
