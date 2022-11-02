@@ -1,9 +1,9 @@
 
 #include <iostream>
 #include <string>
-#include <mainManage.h>
+#include "mainHumanManage.h"
 using namespace std;
-class student : public mainManage
+class student : public mainHumanManage
 
 {
 private:

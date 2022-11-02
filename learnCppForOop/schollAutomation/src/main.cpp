@@ -1,11 +1,11 @@
 #include <iostream>
-#include <student.h>
+#include "teacherManage.h"
 using namespace std;
 int main(int argc, char *argv[])
 {
-
-	int hebele;
-	cout << "Hello world!" << endl;
+	teacherManage teachMenage ;
+	teachMenage.editTeacherId();
+	//teachMenage.listTeacher();
 	
 	system("pause");
 	return 0;
